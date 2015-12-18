@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "cloudant": "^1.4.0",
+    "dotenv": "^1.2.0",
     "slack-node": "^0.1.7",
     "ws": "^0.8.1"
   },
@@ -14,6 +15,7 @@
     "url": "https://github.com/samwierema/emojinal.git"
   },
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sam Wierema <mail@samwierema.nl>",

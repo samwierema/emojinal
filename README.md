@@ -3,13 +3,16 @@ Emojinal is an up- and downvoting system for Slack. Using emoji reactions the ap
 
 ## Features
 * 👍Track positive and negative emoji reactions (you can choose your own!)
-* 👍Kick a user, or pin a message, when a threshold has been reached 
+* 👍Kick a user, or pin a message, when a threshold has been reached
+
+## Use local environment
+Copy the `.env.example` to `.env` and fill in the variables for the following
 
 ## Installation
-1. 💻 Download the source code 
-2. ☁ ️Create an account on [Cloudant](https://cloudant.com/) and create a database 
-3. 🔑 Get a Slack API token (get one [here](https://api.slack.com/web) or via an OAuth flow (needs the `client` scope`)) 
-4. 🏃Run it: `npm index.js` 
+1. 💻 Download the source code
+2. ☁ ️Create an account on [Cloudant](https://cloudant.com/) and create a database
+3. 🔑 Get a Slack API token (get one [here](https://api.slack.com/web) or via an OAuth flow (needs the `client` scope`))
+4. 🏃Run it: `npm index.js`
 
 ## Author
 * [Sam Wierema](http://wiere.ma)
