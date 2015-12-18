@@ -1,3 +1,8 @@
+'use strict';
+
+// Load in local env
+require('dotenv').load({silent: true});
+
 // Initialize the Slack module
 var Slack = require('slack-node');
 var s = new Slack(process.env.SLACK_API_TOKEN);
@@ -98,7 +103,7 @@ function parseData(data, flags) {
                 });
 
                 // Lower threshold reached: kick the user out of the channel
-                if (threshold <= -7) {
+                if (threshold <= (process.env.THRESHOLD * -1)) {
                     kickUser(r.channel, r.message.user);
                     db.insert({
                         date: (new Date).toString()
@@ -106,7 +111,7 @@ function parseData(data, flags) {
                 }
 
                 // Upper threshold reached: pin the message to the channel
-                if (threshold >= 7) {
+                if (threshold >= process.env.THRESHOLD) {
                     pinMessage(r.channel, r.message.ts);
                     db.insert({
                         date: (new Date).toString()
